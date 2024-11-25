@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="formatText('bold')"><b>B</b></button>
+            <button onclick="formatText('italic')"><i>I</i></button>
+            <button onclick="formatText('underline')"><u>U</u></button>
+            <button onclick="clearFormatting()">Clear Formatting</button>
+        </div>
+        <div id="editor" contenteditable="true" class="editor" placeholder="Start typing..."></div>
+        <div class="conversion-container">
+            <h3>Text Conversion</h3>
+            <button onclick="convertText('camelCase')">Camel Case</button>
+            <button onclick="convertText('snake_case')">Snake Case</button>
+            <button onclick="convertText('PascalCase')">Pascal Case</button>
+        </div>
+        <div class="analysis-container">
+            <h3>Text Analysis</h3>
+            <p id="wordCount">Word Count: 0</p>
+            <p id="charCount">Character Count: 0</p>
+            <p id="readingTime">Estimated Reading Time: 0 minutes</p>
+        </div>
+    </div>
+    <script src="./scrpit.js"></script>
+</body>
+</html>
